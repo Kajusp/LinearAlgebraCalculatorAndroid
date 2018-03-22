@@ -31,7 +31,7 @@ public class GeneralFormLine {
 
         dir = p2.minus(p1);
 
-        VectorFormLine v = new VectorFormLine(p1.x, p1.y, p2.x, p2.y);
+        VectorFormLine v = new VectorFormLine(p1.x, p1.y, dir.x, dir.y);
         return v;
     }
 
