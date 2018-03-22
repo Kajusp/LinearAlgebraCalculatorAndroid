@@ -1,0 +1,387 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.KayStudio.android.linearalgebracalculator.MatrixInverse">
+
+
+    <Spinner
+        android:id="@+id/selectMatrixInverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:entries="@array/SelectInverseMatrix" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat11"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat12"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat13"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat14"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat15"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat16"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat21"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat22"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat23"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat24"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat25"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat26"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat31"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat32"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat33"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat34"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat35"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat36"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat41"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat42"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat43"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat44"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat45"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat46"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat51"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat52"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat53"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat54"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat55"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat56"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat61"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat62"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat63"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat64"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat65"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="     "
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/invMat66"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calculate inverse"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:onClick="calculateInverse"/>
+
+</LinearLayout>

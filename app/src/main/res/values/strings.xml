@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Linear Algebra Calculator</string>
+    <string name="title_activity_lines_planes_form">LinesPlanesForm</string>
+
+    <string-array name="Select">
+        <item>General Form Line</item>
+        <item>Normal Form Line</item>
+        <item>Vector Form Line</item>
+        <item>General Form Plane</item>
+        <item>Normal Form Plane</item>
+        <item>Vector Form Plane</item>
+    </string-array>
+
+    <string-array name="SelectInverseMatrix">
+        <item>2x2 Matrix</item>
+        <item>3x3 Matrix</item>
+        <item>4x4 Matrix</item>
+        <item>5x5 Matrix</item>
+        <item>6x6 Matrix</item>
+    </string-array>
+
+</resources>

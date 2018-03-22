@@ -1,0 +1,657 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.KayStudio.android.linearalgebracalculator.LinesPlanesForm">
+
+
+
+    <Spinner
+        android:id="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:entries="@array/Select" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- LINE VECTOR FORM -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:id="@+id/lineVec">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter the vector plane equation vectors p and d where x = p + td"
+                        android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="p = "
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/x1VecConvLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="     "
+                                android:inputType="numberSigned|numberDecimal" />
+
+                            <EditText
+                                android:id="@+id/y1VecConvLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="     "
+                                android:inputType="numberSigned|numberDecimal" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="d = "
+                            android:textSize="20sp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="32dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/x2VecConvLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="     "
+                                android:inputType="numberSigned|numberDecimal" />
+
+                            <EditText
+                                android:id="@+id/y2VecConvLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="     "
+                                android:inputType="numberSigned|numberDecimal" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/vecToNormLine"
+                        android:text="The normal form is : "/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/vecToGenLine"
+                        android:text="The general form is : "/>
+
+                </LinearLayout>
+
+<!--LINE NORMAL FORM-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:id="@+id/lineNorm">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the normal line equation vectors n and p where nx = np "
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="n = "
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/x1NormConvLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/y1NormConvLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="p = "
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/x2NormConvLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/y2NormConvLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/normToGenLine"
+                android:text="The general form is : "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/normToVecLine"
+                android:text="The vector form is : "/>
+
+
+        </LinearLayout>
+
+
+        <!--
+                GENERAL LINE
+-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:id="@+id/lineGen">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/aGenConvLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="     "
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X   +   "
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/bGenConvLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="     "
+                            android:inputType="numberSigned|numberDecimal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Y   =   "
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/cGenConvLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="     "
+                            android:inputType="numberSigned|numberDecimal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:text="The normal form is : "
+                        android:id="@+id/genToNormLine"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="The vector form is : "
+                        android:id="@+id/genToVecLine"/>/>
+
+
+                </LinearLayout>
+
+
+<!--
+        PLANE GENERAL FORM
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:id="@+id/planeGen">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/aGenConv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="     "
+                    android:inputType="numberSigned|numberDecimal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X   +   "
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/bGenConv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="     "
+                    android:inputType="numberSigned|numberDecimal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Y   +   "
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/cGenConv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="     "
+                    android:inputType="numberSigned|numberDecimal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Z   =   "
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/dGenConv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="     "
+                    android:inputType="numberSigned|numberDecimal" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/genToNormPlane"
+                android:text="The normal form is : "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/genToVecPlane"
+                android:text="The vector form is : "/>
+
+
+        </LinearLayout>
+
+
+
+<!--
+      PLANE NORMAL FORM
+-->
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:id="@+id/planeNorm">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the normal plane equation vectors n and p where nx = np "
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="n = "
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/x1NormConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/y1NormConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/z1NormConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="p = "
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/x2NormConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/y2NormConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/z2NormConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/normToGenPlane"
+                android:text="The general form is : "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/normToVecPlane"
+                android:text="The vector form is : "/>
+
+
+        </LinearLayout>
+
+
+<!-- PLANE VECTOR FORM
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:id="@+id/planeVec">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the vector plane equation vectors p, d and s where x = p + td + ks "
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="p = "
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/x1VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/y1VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/z1VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="d = "
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/x2VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/y2VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/z2VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="s = "
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/x3VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/y3VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/z3VecConv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="     "
+                        android:inputType="numberSigned|numberDecimal" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/vecToNormPlane"
+                android:text="The normal form is : "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/vecToGenPlane"
+                android:text="The general form is : "/>
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="Convert"
+            android:onClick="calculateLinePlaneForm"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
