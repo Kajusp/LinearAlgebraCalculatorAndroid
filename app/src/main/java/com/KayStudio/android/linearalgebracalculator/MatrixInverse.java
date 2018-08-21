@@ -18,7 +18,7 @@ public class MatrixInverse extends AppCompatActivity {
 
     ArrayList<EditText> matrixInputs = new ArrayList<EditText>();
 
-    int selectionas;
+    int selection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +31,12 @@ public class MatrixInverse extends AppCompatActivity {
         {
 
             @Override
-
-            public void onItemSelected(AdapterView<?> parent, View view, int
-                    position, long id) {
-
-
-                selectionas = position;
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selection = position;
 
                 for (int i=0; i<6; i++){
                     for (int j=0; j<6; j++){
-                        if (i<selectionas+2 && j<selectionas+2)
+                        if (i<selection+2 && j<selection+2)
                             matrixInputs.get(i*6+j).setVisibility(View.VISIBLE);
                         else
                             matrixInputs.get(i*6+j).setVisibility(View.INVISIBLE);
@@ -48,38 +44,31 @@ public class MatrixInverse extends AppCompatActivity {
                 }
 
             }
-
             @Override
-
             public void onNothingSelected(AdapterView<?> parent) {
-
-
-
             }
-
         });
     }
 
     public void calculateInverse(View view){
 
-        double[][] m = new double[selectionas+2][selectionas+2];
+        double[][] m = new double[selection+2][selection+2];
 
-
-    try {
-        for (int i = 0; i < selectionas + 2; i++) {
-            for (int j = 0; j < selectionas + 2; j++) {
-                m[i][j] = Double.parseDouble(matrixInputs.get(i * 6 + j).getText().toString());
+        try {
+            for (int i = 0; i < selection + 2; i++) {
+                for (int j = 0; j < selection + 2; j++) {
+                    m[i][j] = Double.parseDouble(matrixInputs.get(i * 6 + j).getText().toString());
+                }
             }
         }
-    }
-    catch (NumberFormatException e){
-        Toast.makeText(getApplicationContext(), "Incorrect input." ,
-                Toast.LENGTH_LONG).show();
+        catch (NumberFormatException e){
+            Toast.makeText(getApplicationContext(), "Incorrect input." ,
+                    Toast.LENGTH_LONG).show();
 
-        return;
-    }
+            return;
+        }
 
-        inverse(m);
+            inverse(m);
 
     }
 
@@ -97,7 +86,6 @@ public class MatrixInverse extends AppCompatActivity {
             return;
         }
 
-
         for (int i=0; i<M.length; i++){
             for (int j=0; j<M[i].length; j++){
                 M[i][j] = JM.get(i,j);
@@ -105,16 +93,13 @@ public class MatrixInverse extends AppCompatActivity {
             }
         }
 
-
-
         Intent intent = new Intent(this, MatrixInverseAnswer.class);
         Bundle b=new Bundle();
         b.putSerializable("answer", M);
         intent.putExtras(b);
-        int passableSize=selectionas+2;
+        int passableSize=selection+2;
         intent.putExtra("size", passableSize);
         startActivity(intent);
-
     }
 
 

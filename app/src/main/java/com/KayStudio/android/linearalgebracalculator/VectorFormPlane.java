@@ -1,9 +1,5 @@
 package com.KayStudio.android.linearalgebracalculator;
 
-/**
- * Created by kajus on 18.3.12.
- */
-
 public class VectorFormPlane extends VectorFormLine {
     public double p3, d3, s1, s2, s3;
 
@@ -24,7 +20,6 @@ public class VectorFormPlane extends VectorFormLine {
         n1 = d2*s3 - d3*s2;
         n2 = d3*s1 - d1*s3;
         n3 = d1*s2 - d2*s1;
-
         NormalFormPlane p = new NormalFormPlane(n1,n2,n3,p1,p2,p3);
 
         return p;
@@ -36,6 +31,4 @@ public class VectorFormPlane extends VectorFormLine {
         GeneralFormPlane g = n.convertToGen();
         return g;
     }
-
-
 }

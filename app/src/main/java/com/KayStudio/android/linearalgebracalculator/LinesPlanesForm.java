@@ -10,10 +10,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class LinesPlanesForm extends AppCompatActivity {
 
-    int selectionas;
+    int selection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +24,7 @@ public class LinesPlanesForm extends AppCompatActivity {
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
-
-            public void onItemSelected(AdapterView<?> parent, View view, int
-                    position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 LinearLayout planeGen = (LinearLayout) findViewById(R.id.planeGen);
                 LinearLayout planeNorm = (LinearLayout) findViewById(R.id.planeNorm);
@@ -37,7 +34,7 @@ public class LinesPlanesForm extends AppCompatActivity {
                 LinearLayout lineNorm = (LinearLayout) findViewById(R.id.lineNorm);
                 LinearLayout lineVec = (LinearLayout) findViewById(R.id.lineVec);
 
-                selectionas = position;
+                selection = position;
 
                 switch (position) {
                     case 0:
@@ -89,22 +86,16 @@ public class LinesPlanesForm extends AppCompatActivity {
                         planeVec.setVisibility(view.VISIBLE);
                         break;
                 }
-
             }
 
             @Override
-
             public void onNothingSelected(AdapterView<?> parent) {
-
-
             }
-
         });
-
     }
 
     public void calculateLinePlaneForm(View view) {
-        switch (selectionas) {
+        switch (selection) {
             case 0:
                 lineGenConvert();
                 break;
@@ -128,7 +119,6 @@ public class LinesPlanesForm extends AppCompatActivity {
 
     private void lineGenConvert() {
 
-
         EditText aIn, bIn, cIn;
         double a, b, c;
         try {
@@ -144,7 +134,6 @@ public class LinesPlanesForm extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
             return;
         }
-
 
         if ((a == b && a == 0)) {
             Toast.makeText(getApplicationContext(), "Please enter a valid line.",
@@ -214,7 +203,6 @@ public class LinesPlanesForm extends AppCompatActivity {
         p1In = (EditText) findViewById(R.id.x2NormConvLine);
         p2In = (EditText) findViewById(R.id.y2NormConvLine);
 
-
         try {
             n1 = Double.parseDouble(n1In.getText().toString());
             n2 = Double.parseDouble(n2In.getText().toString());
@@ -233,8 +221,6 @@ public class LinesPlanesForm extends AppCompatActivity {
             return;
         }
 
-
-
         TextView normToGenLine = (TextView) findViewById(R.id.normToGenLine);
         TextView normToVecLine = (TextView) findViewById(R.id.normToVecLine);
 
@@ -249,7 +235,6 @@ public class LinesPlanesForm extends AppCompatActivity {
 
     private void planeGenConvert(){
         EditText aIn, bIn, cIn, dIn;
-
         double a,b,c,d;
 
         aIn = (EditText) findViewById(R.id.aGenConv);
@@ -292,7 +277,6 @@ public class LinesPlanesForm extends AppCompatActivity {
 
         double n1,n2,n3,p1,p2,p3;
 
-
         n1In = (EditText) findViewById(R.id.x1NormConv);
         n2In = (EditText) findViewById(R.id.y1NormConv);
         n3In = (EditText) findViewById(R.id.z1NormConv);
@@ -300,7 +284,6 @@ public class LinesPlanesForm extends AppCompatActivity {
         p1In = (EditText) findViewById(R.id.x2NormConv);
         p2In = (EditText) findViewById(R.id.y2NormConv);
         p3In = (EditText) findViewById(R.id.z2NormConv);
-
 
         try {
             n1 = Double.parseDouble(n1In.getText().toString());
@@ -351,7 +334,6 @@ public class LinesPlanesForm extends AppCompatActivity {
         s2In = (EditText) findViewById(R.id.y3VecConv);
         s3In = (EditText) findViewById(R.id.z3VecConv);
 
-
         try {
 
             p1 = Double.parseDouble(p1In.getText().toString());
@@ -389,7 +371,3 @@ public class LinesPlanesForm extends AppCompatActivity {
         vecToNormPlane.setText("The normal form is : nx = np, where n = [" + normPlane.n1 + ", " + normPlane.n2 + ", " + normPlane.n3 + "] and p = [" + String.format("%.2f", normPlane.p1) + ", " + String.format("%.2f", normPlane.p2) + ", " + String.format("%.2f", normPlane.p3) + "]");
     }
 }
-
-
-
-

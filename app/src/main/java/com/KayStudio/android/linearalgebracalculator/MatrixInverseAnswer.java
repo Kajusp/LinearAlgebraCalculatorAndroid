@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class MatrixInverseAnswer extends AppCompatActivity {
@@ -19,7 +18,6 @@ public class MatrixInverseAnswer extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         double[][] mAnswer = (double[][])b.getSerializable("answer");
         int size = getIntent().getIntExtra("size", 0);
-
         formOutput();
 
         for (int i=0; i<6; i++){
@@ -37,9 +35,7 @@ public class MatrixInverseAnswer extends AppCompatActivity {
                 }
             }
         }
-
     }
-
 
     public void formOutput(){
         matrixOutputs.add((TextView) findViewById(R.id.invAns11));
@@ -85,6 +81,4 @@ public class MatrixInverseAnswer extends AppCompatActivity {
         matrixOutputs.add((TextView) findViewById(R.id.invAns66));
 
     }
-
-
 }

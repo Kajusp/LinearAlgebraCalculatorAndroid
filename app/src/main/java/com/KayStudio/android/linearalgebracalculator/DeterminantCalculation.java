@@ -8,16 +8,14 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-
 import Jama.Matrix;
 
 public class DeterminantCalculation extends AppCompatActivity {
 
     ArrayList<EditText> matrixInputs = new ArrayList<EditText>();
 
-    int selectionas;
+    int selection;
 
 
     @Override
@@ -30,18 +28,15 @@ public class DeterminantCalculation extends AppCompatActivity {
         Spinner sp = (Spinner) findViewById(R.id.selectMatrixInverse);
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
-
             @Override
-
             public void onItemSelected(AdapterView<?> parent, View view, int
                     position, long id) {
 
-
-                selectionas = position;
+                selection = position;
 
                 for (int i=0; i<6; i++){
                     for (int j=0; j<6; j++){
-                        if (i<selectionas+2 && j<selectionas+2)
+                        if (i<selection+2 && j<selection+2)
                             matrixInputs.get(i*6+j).setVisibility(View.VISIBLE);
                         else
                             matrixInputs.get(i*6+j).setVisibility(View.INVISIBLE);
@@ -51,24 +46,18 @@ public class DeterminantCalculation extends AppCompatActivity {
             }
 
             @Override
-
             public void onNothingSelected(AdapterView<?> parent) {
-
-
-
             }
-
         });
 
     }
 
     public void calculateDeterminant(View view){
-        double[][] m = new double[selectionas+2][selectionas+2];
-
+        double[][] m = new double[selection+2][selection+2];
 
         try {
-            for (int i = 0; i < selectionas + 2; i++) {
-                for (int j = 0; j < selectionas + 2; j++) {
+            for (int i = 0; i < selection + 2; i++) {
+                for (int j = 0; j < selection + 2; j++) {
                     m[i][j] = Double.parseDouble(matrixInputs.get(i * 6 + j).getText().toString());
                 }
             }
@@ -80,16 +69,13 @@ public class DeterminantCalculation extends AppCompatActivity {
             return;
         }
 
+        Matrix jamaMatrix = new Matrix(m);
 
-        Matrix JM = new Matrix(m);
-
-        double det = Math.round(JM.det()*100.0)/100.0;
+        double det = Math.round(jamaMatrix.det()*100.0)/100.0;
 
         TextView detOutput;
         detOutput = (TextView) findViewById(R.id.determinantAnswer);
-
         String s = detOutput.getText().toString();
-
         detOutput.setText(s + " " + det + "\nnote: the value of the determinant is rounded to two decimal places.");
 
     }

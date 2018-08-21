@@ -1,9 +1,5 @@
 package com.KayStudio.android.linearalgebracalculator;
 
-/**
- * Created by kajus on 18.3.12.
- */
-
 public class GeneralFormLine {
 
     public double a, b, d;
@@ -16,9 +12,7 @@ public class GeneralFormLine {
 
     public VectorFormLine convertToVec(){
 
-
         Point2D p1, p2, dir;
-
 
         if (b!=0){
             p1 = new Point2D(0, d/b);

@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class EigenCalculationAnswer extends AppCompatActivity {
@@ -15,15 +14,11 @@ public class EigenCalculationAnswer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eigen_calculation_answer);
-
         Bundle b = getIntent().getExtras();
         double[][] eigenvalues = (double[][])b.getSerializable("answerval");
         double[][] eigenvectors = (double[][])b.getSerializable("answervec");
         int size = getIntent().getIntExtra("size", 0);
-
-
         formOutput();
-
 
         for (int i=0; i<6; i++){
             if (i>=size){
@@ -43,9 +38,7 @@ public class EigenCalculationAnswer extends AppCompatActivity {
                 matrixOutputs.get(i).setText(s + "]");
             }
         }
-
     }
-
 
     public void formOutput(){
         matrixOutputs.add((TextView) findViewById(R.id.eigen1));

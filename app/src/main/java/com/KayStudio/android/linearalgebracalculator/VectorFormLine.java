@@ -1,9 +1,5 @@
 package com.KayStudio.android.linearalgebracalculator;
 
-/**
- * Created by kajus on 18.3.12.
- */
-
 public class VectorFormLine {
     public double p1,p2,d1,d2;
 
@@ -18,8 +14,6 @@ public class VectorFormLine {
 
         double n1, n2=1;
 
-        //n1*d1 + n2*d2 = 0;
-
         if (d1!=0) {
 
             n1 = -n2 * d2 / d1;
@@ -28,7 +22,6 @@ public class VectorFormLine {
                 n2=n2/n1;
                 n1=1;
             }
-
         }
         else{
             n1=1;
@@ -42,12 +35,8 @@ public class VectorFormLine {
     public GeneralFormLine convertToGen(){
 
         NormalFormLine n = convertToNorm();
-
         GeneralFormLine g = n.convertToGen();
 
         return g;
     }
-
-
-
 }
